@@ -1,0 +1,49 @@
+[
+  {
+    "calculation_of": "Total operating expenses",
+    "contributing_values": [
+      { "name": "Depreciation expense", "value": 100 },
+      { "name": "Wages expenses", "value": 1200 },
+      { "name": "Supplies expenses", "value": 60 }
+    ],
+    "total_amount": 1360,
+    "reasoning": "Sum of individual operating expenses."
+  },
+  {
+    "calculation_of": "Operating Income",
+    "contributing_values": [
+      { "name": "Service revenue", "value": 2750 },
+      { "name": "Total operating expenses", "value": -1360 }
+    ],
+    "total_amount": 1390,
+    "reasoning": "Operating Income is derived by subtracting Total operating expenses from Service revenue."
+  },
+  {
+    "calculation_of": "Pretax income",
+    "contributing_values": [
+      { "name": "Operating Income", "value": 1390 },
+      { "name": "Interest expense", "value": -40 }
+    ],
+    "total_amount": 1350,
+    "reasoning": "Pretax income is calculated by subtracting Interest expense from Operating Income."
+  },
+  {
+    "calculation_of": "Net income",
+    "contributing_values": [
+      { "name": "Pretax income", "value": 1350 },
+      { "name": "Income tax expense", "value": -405 }
+    ],
+    "total_amount": 945,
+    "reasoning": "Net income is derived by subtracting Income tax expense from Pretax income."
+  },
+  {
+    "calculation_of": "Balance, September 30, 2021",
+    "contributing_values": [
+      { "name": "Balance, October 1, 2020", "value": 820 },
+      { "name": "Net income", "value": 945 },
+      { "name": "Dividends declared", "value": -500 }
+    ],
+    "total_amount": 1265,
+    "reasoning": "This retained earnings balance is calculated from Balance, October 1, 2020 plus Net income minus Dividends declared."
+  }
+]

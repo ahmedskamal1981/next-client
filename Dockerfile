@@ -1,5 +1,5 @@
 # Stage 1: Install dependencies and build
-FROM node:18-alpine AS builder
+FROM node:20-alpine AS builder
 
 WORKDIR /app
 
@@ -10,11 +10,14 @@ RUN npm install
 # Copy all source files
 COPY . .
 
+# Limit memory usage during Next.js build
+ENV NODE_OPTIONS="--max-old-space-size=512"
+
 # Build the app for production
 RUN npm run build
 
 # Stage 2: Run the production build
-FROM node:18-alpine AS runner
+FROM node:20-alpine AS runner
 
 WORKDIR /app
 

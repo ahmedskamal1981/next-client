@@ -1,5 +1,5 @@
 # Stage 1: Install dependencies and build
-FROM node:20-alpine AS builder
+FROM node:22-alpine AS builder
 
 WORKDIR /app
 
@@ -17,7 +17,7 @@ ENV NODE_OPTIONS="--max-old-space-size=512"
 RUN npm run build
 
 # Stage 2: Run the production build
-FROM node:20-alpine AS runner
+FROM node:22-alpine AS runner
 
 WORKDIR /app
 
